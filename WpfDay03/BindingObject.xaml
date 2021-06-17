@@ -1,0 +1,62 @@
+﻿<Window x:Class="WpfDay03.BindingObject"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:h="clr-namespace:WpfDay03"
+      Loaded="Window_Loaded"
+        mc:Ignorable="d"
+        Title="BindingObject" Height="450" Width="800">
+    <!--<Window.Resources>
+        <h:Employee  x:Key="Emp1" Id="20" Fname="Hamada" LastName="Hamada2"></h:Employee>
+    </Window.Resources>-->
+    <!--#region Binding Object -->
+    <!--<StackPanel  DataContext="{StaticResource Emp1}" >
+        <Label Content="{Binding Id}"
+            Margin="5"
+               Width="70"
+               Height="30"
+               FontSize="20"
+               ></Label>
+        <Label Content="{Binding Fname}"
+            Margin="5"
+               Width="70"
+               Height="30"
+               FontSize="20"
+               ></Label>
+        <Label Content="{Binding LastName}"
+            Margin="5"
+               Width="70"
+               Height="30"
+               FontSize="20"
+               ></Label>
+    </StackPanel>-->
+    <!--#endregion-->
+    <StackPanel x:Name="stp">
+        
+    <ComboBox VerticalAlignment="Top" Name="combo" Width="70"
+              Height="30"
+              Margin="5"
+              SelectionChanged="combo_SelectionChanged"
+              ></ComboBox>
+        <StackPanel >  
+        <Label
+            Content="{Binding Id }"
+            Name="lbl1" Margin="5"
+               Width="70"
+               Height="30"></Label>
+
+        <Label
+            Content="{Binding Fname }"
+            Name="lbl2" Margin="5"
+               Width="70"
+               Height="30"></Label>
+        
+        <Label 
+            Content="{Binding LastName }"
+            Name="lbl3" Margin="5"
+               Width="70"
+               Height="30"></Label>
+        </StackPanel>
+    </StackPanel>
+</Window>
